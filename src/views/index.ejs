@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/calc.css">
-  <link rel="stylesheet" href="../js/calculadora.js">
+  <script src="../js/calculadora.js"></script>
   <title>Calculadora</title>
 
 </head>
@@ -14,13 +14,13 @@
     <h1>Thomas Campos</h1>
     <div class="calc">
       <h2>CALCULADORA</h2>
-      <p id="resultado"> resultado</p>
+      <p id="resultado"> </p>
       <table>
         <tr>
-          <td><button onclick="">AC</button></td>
-          <td><button onclick="">+/-</button></td>
-          <td><button onclick="">%</button></td>
-          <td><button onclick="">&#247;</button></td>
+          <td><button onclick="clean()">AC</button></td>
+          <td><button onclick="back()"><</button></td>
+          <td><button onclick="insert('%')">%</button></td>
+          <td><button onclick="insert('/')">&#247;</button></td>
         </tr>
         <tr>
           <td><button onclick="insert('7')">7</button></td>
@@ -42,16 +42,11 @@
         </tr>
         <tr>
           <td colspan="2"><button class="botao" onclick="insert('0')">0</button></td>
-          <td><button onclick="insert(',')">,</button></td>
-          <td><button onclick="insert('=')">=</button></td>
+          <td><button onclick="insert('.')">.</button></td>
+          <td><button onclick="calcular()">=</button></td>
         </tr>
       </table>
     </div>
   </div>
-  <script>
-    function insert(n1){
-document.getElementById('resultado').innerHTML = n1
-}
-  </script>
 </body>
 </html>
